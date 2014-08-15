@@ -1,10 +1,15 @@
 import java.util.Stack;
 import visitor.*;
 import interpreter.*;
+import observer.*;
 
 public class TestPatterns {
 
     public static void main (String args[]) {
+        TestObserver.test();        
+    }
+
+    public static void testVisitorInterpreter () {
         String expression = "1 + 1 + 1";
         Expression root = parse(expression);
         PrintVisitor v = new PrintVisitor();
